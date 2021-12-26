@@ -1,0 +1,29 @@
+user@computer ~/D/P/p/source (master)> p4a apk --debug
+[INFO]:    Reading .p4a configuration
+[INFO]:    Will compile for the following archs: armeabi-v7a
+[INFO]:    Getting Android API version from user argument: 27
+[ERROR]:   Build failed: Could not find `android` or `sdkmanager` binaries in Android SDK
+[INFO]:    Instructions: Make sure the path to the Android SDK is correct
+
+user@computer ~/D/P/p/source (master) [1]> cat .p4a
+--private . 
+--package=org.example.myapp 
+--name "My WebView Application" 
+--version 0.1 
+--bootstrap=webview 
+--requirements=flask 
+--port=5000 
+--sdk-dir ~/Documents/androidsdk
+--ndk-dir ~/Documents/androidsdk/android-ndk-r19c 
+--android-api 27 
+--ndk-api 21 
+
+
+user@computer ~/D/P/p/source (master) [1]> ls ~/Documents/androidsdk/
+android-ndk-r19c/                  android-ndk-r22b/  cmdline-tools/                             emulator/  patcher/    platform-tools/
+android-ndk-r19c-linux-x86_64.zip  build-tools/       commandlinetools-linux-7583922_latest.zip  licenses/  platforms/  tools/
+
+user@computer ~/D/P/p/source (master)> ls ~/Documents/androidsdk/android-ndk-r19c/
+build/        meta/       ndk-gdb*    ndk-which*  NOTICE.toolchain  prebuilt/         README.md      simpleperf/        sources/  toolchains/
+CHANGELOG.md  ndk-build*  ndk-stack*  NOTICE      platforms/        python-packages/  shader-tools/  source.properties  sysroot/  wrap.sh/
+user@computer ~/D/P/p/source (master)> 
